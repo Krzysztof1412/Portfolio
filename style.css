@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 50px;
+}
+
+nav .nav-btn {
+  position: relative;
+  padding: 10px 20px;
+  color: #fff;
+  font-size: 24px;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-btn:hover::after {
+  content: '';
+  width: 100%;
+}
+
+.start {
+  height: calc(100vh - 89px);
+  display: flex;
+}
+
+.start-tile {
+  width: 50%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-center h1 {
+  font-size: 10em;
+}
+
+.start-center h2 {
+  font-size: 3.5em;
+}
+
+.start-header,
+.start-tile img {
+  transition: 0.7s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.about-me-section {
+  height: 100vh;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-me h2 {
+  text-align: center;
+  font-size: 5em;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.about-me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70vw;
+  height: 70vh;
+  border: 10px dotted #000;
+}
+
+.about-me-side {
+  padding: 0 10px;
+  width: 30vw;
+}
+
+.about-me-img img {
+  width: 100%;
+}
