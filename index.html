@@ -16,19 +16,22 @@
     />
   </head>
   <body>
-    <header>
+    <header class="section-1">
       <nav>
         <div class="nav-btn">Start</div>
         <div class="nav-btn">About me</div>
         <div class="nav-btn">My projects</div>
         <div class="nav-btn">Contact</div>
       </nav>
+      <div class="nav-logo">
+        <img src="img/logo.png" alt="" />
+      </div>
       <section class="start">
         <div class="start-tile">
           <div class="start-center">
-            <h1 class="start-header hidden">Hi,</h1>
+            <h1 class="start-header hidden">Hej,</h1>
             <h2 class="start-header hidden">
-              I want to become Front-end Developer
+              Chcę zostać Front-end Developerem
             </h2>
           </div>
         </div>
@@ -42,7 +45,7 @@
       </section>
     </header>
     <main>
-      <section class="about-me-section">
+      <section class="about-me-section section-2">
         <div class="about-me">
           <div class="about-me-img">
             <img
@@ -50,7 +53,7 @@
             alt="">
           </div>
           <div class="about-me-side">
-            <h2>About me</h2>
+            <h2>O mnie</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Quibusdam corporis at temporibus tempore amet accusamus,
@@ -73,13 +76,13 @@
           </div>
         </div>
       </section>
-      <section class="my-projects-section">
-        <h2>My projects</h2>
+      <section class="my-projects-section section-3">
+        <h2>Moje projekty</h2>
         <div class="projects-container">
           <div class="project">
             <img src="img/responsive-site.png" alt="" />
             <div class="show-info">
-              <h3>Front-end page</h3>
+              <h3>Strona Front-end</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                 dolore error facere est dolor perspiciatis rem necessitatibus
@@ -103,7 +106,7 @@
           <div class="project">
             <img src="img/bank-app.png" alt="" />
             <div class="show-info">
-              <h3>Bank application</h3>
+              <h3>Aplikacja bankowa</h3>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
                 dolore error facere est dolor perspiciatis rem necessitatibus
@@ -113,32 +116,50 @@
             </div>
           </div>
         </div>
-        <p>All of my projects were made by myself.</p>
-        <p>None of them are from courses.</p>
+        <p>Wszystkie projekty zostało zrobione samodzielnie</p>
+        <p>Żadne nie pochodzą z kursów lub tutoriali.</p>
       </section>
-      <section class="contact-section">
+      <section class="contact-section section-4">
         <div class="contact-tile">
-          <h2>Contact</h2>
-          <p>Send me a message or find me here:</p>
+          <h2>Kontakt</h2>
+          <p>Wyślij wiadomość lub znajdź mnie tutaj:</p>
           <div class="social-media">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-github"></i></a>
           </div>
         </div>
         <div class="contact-tile">
-          <form>
+          <form
+            action="https://formsubmit.co/krzysztof.koltowski14@gmail.com"
+            method="POST"
+          >
             <label>
-              <p>Your email:</p>
-              <input type="email" id="email" autocomplete="off" />
+              <p>Twój email:</p>
+              <input type="email" id="email" name="email" autocomplete="off" />
             </label>
-            <p>Message:</p>
-            <textarea name="" id="message"></textarea>
+            <p>Wiadomość:</p>
+            <textarea name="message" id="message"></textarea>
             <div class="send-btn">
               <input type="submit" value="Send" />
+              <p id="form-info"></p>
             </div>
+            <input type="hidden" name="_subject" value="New message" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="http://127.0.0.1:5500/MySites/Portfolio/thankyou.html"
+            />
           </form>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="footer-img">
+        <img src="img/logo.png" alt="" />
+      </div>
+      <p>&copy; 2022 Krzysztof Kołtowski</p>
+      <p>All rights reserved.</p>
+    </footer>
   </body>
 </html>

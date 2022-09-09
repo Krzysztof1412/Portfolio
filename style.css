@@ -17,6 +17,17 @@ nav {
   padding: 20px 50px;
 }
 
+.nav-logo {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+
+.nav-logo img {
+  width: 100%;
+}
+
 nav .nav-btn {
   position: relative;
   padding: 10px 20px;
@@ -47,6 +58,7 @@ nav .nav-btn {
 .start {
   height: calc(100vh - 89px);
   display: flex;
+  padding: 2vw;
 }
 
 .start-tile {
@@ -87,15 +99,15 @@ nav .nav-btn {
   text-align: center;
   font-size: 5em;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 .about-me {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 90vw;
-  height: 90vh;
+  width: 90%;
+  height: 90%;
   max-width: 1800px;
   max-height: 800px;
   border: 10px dotted #000;
@@ -103,7 +115,7 @@ nav .nav-btn {
 
 .about-me-side {
   padding: 0 10px;
-  width: 30vw;
+  width: 30%;
 }
 
 .about-me-img img {
@@ -236,6 +248,7 @@ nav .nav-btn {
 
 .send-btn {
   text-align: right;
+  position: relative;
 }
 
 .send-btn input {
@@ -250,9 +263,61 @@ nav .nav-btn {
 .social-media {
   padding: 20px 0;
   font-size: 3em;
-  /* text-align: center; */
+}
+
+#form-info {
+  font-size: 18px;
+  position: absolute;
 }
 
 a {
   color: #000;
+}
+
+footer {
+  padding: 10px 0;
+  color: #fff;
+}
+
+footer p {
+  text-align: center;
+  font-weight: 400;
+}
+
+.footer-img {
+  width: 30px;
+  margin: auto;
+}
+
+.footer-img img {
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .start {
+    justify-content: space-between;
+  }
+
+  .start-tile {
+    width: 40%;
+  }
+}
+
+@media (max-width: 900px) {
+  .start {
+    justify-content: center;
+    padding: 0 2vw 50px;
+  }
+
+  .start-tile {
+    width: 100%;
+  }
+
+  .start-tile:last-child {
+    display: none;
+  }
+
+  .nav-btn {
+    display: none;
+  }
 }
