@@ -15,6 +15,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   padding: 20px 50px;
+  min-height: 96px;
 }
 
 .nav-logo {
@@ -70,6 +71,10 @@ nav .nav-btn {
   align-items: center;
 }
 
+.start-tile img {
+  height: 100%;
+}
+
 .start-center h1 {
   font-size: 10em;
 }
@@ -93,6 +98,7 @@ nav .nav-btn {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10px;
 }
 
 .about-me h2 {
@@ -118,21 +124,28 @@ nav .nav-btn {
   width: 30%;
 }
 
+.about-me-img {
+  height: 100%;
+}
+
 .about-me-img img {
-  width: 100%;
+  height: 100%;
 }
 
 .my-projects-section {
-  height: 100vh;
+  min-height: 100vh;
   color: #fff;
   padding: 3%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
 }
 
 .my-projects-section h2 {
   text-align: center;
   font-size: 5em;
+  margin-bottom: 50px;
+  position: relative;
 }
 
 .projects-container {
@@ -142,13 +155,12 @@ nav .nav-btn {
   gap: 20px 10px;
   justify-content: space-evenly;
   align-content: center;
-  position: relative;
 }
 
-.projects-container::after {
+.projects-heading::after {
   content: '';
   position: absolute;
-  top: 10%;
+  top: 120%;
   left: 50%;
   width: 50%;
   height: 5px;
@@ -293,12 +305,72 @@ footer p {
   width: 100%;
 }
 
+.burger-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 40px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  z-index: 100;
+}
+
+#menu-check:checked {
+  font-size: 40px;
+}
+
+input[type="checkbox"] {
+  /* display: none; */
+}
+
+.burger-top,
+.burger-mid,
+.burger-bottom {
+  width: 70%;
+  height: 2px;
+  background-color: #fff;
+}
+
+.side-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #000;
+  opacity: 0.7;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transform: translateX(100%);
+  transition: .3s ease-in-out;
+}
+
+.side-menu-btn {
+  color: #fff;
+  font-size: 36px;
+}
+
+@media (max-width: 1400px) {
+  .project {
+    min-width: 400px;
+  }
+}
+
 @media (max-width: 1200px) {
   .start {
     justify-content: space-between;
   }
 
-  .start-tile {
+  .start-tile { 
     width: 40%;
   }
 }
@@ -319,5 +391,51 @@ footer p {
 
   .nav-btn {
     display: none;
+  }
+
+  .about-me-section {
+    height: auto;
+    padding: 10px;
+  }
+
+  .about-me {
+    flex-direction: column-reverse;
+  }
+
+  .about-me-side {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .about-me-img {
+    height: 300px;
+    padding: 10px;
+  }
+
+  .my-projects-section {
+    height: auto;
+  }
+
+  .projects-container::after {
+    display: none;
+  }
+
+  .contact-section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .contact-tile {
+    width: 100%;
+  }
+}
+
+@media (max-height: 500px) {
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4 {
+    height: auto;
   }
 }

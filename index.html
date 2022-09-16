@@ -26,12 +26,27 @@
       <div class="nav-logo">
         <img src="img/logo.png" alt="" />
       </div>
+      <label>
+        <input type="checkbox" id="menu-check">
+        <div class="burger-btn">
+          <div class="burger-top"></div>
+          <div class="burger-mid"></div>
+          <div class="burger-bottom"></div>
+        </div>
+      </label>
+      <div class="side-menu">
+        <div class="side-menu-btn">Start</div>
+        <div class="side-menu-btn">About me</div>
+        <div class="side-menu-btn">My projects</div>
+        <div class="side-menu-btn">Contact</div>
+      </div>
+      
       <section class="start">
         <div class="start-tile">
           <div class="start-center">
-            <h1 class="start-header hidden">Hej,</h1>
+            <h1 class="start-header hidden">Hi,</h1>
             <h2 class="start-header hidden">
-              Chcę zostać Front-end Developerem
+              I want to become Front-end Developer
             </h2>
           </div>
         </div>
@@ -53,31 +68,16 @@
             alt="">
           </div>
           <div class="about-me-side">
-            <h2>O mnie</h2>
+            <h2>About me</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Quibusdam corporis at temporibus tempore amet accusamus,
-              consequatur error delectus esse modi adipisci, impedit assumenda
-              quia aut nesciunt eligendi dolorem sint necessitatibus! Ipsa, eos?
-              Ea, assumenda itaque, excepturi obcaecati soluta beatae fuga,
-              laborum ipsa in odit perspiciatis nihil facere eum commodi
-              accusamus dignissimos perferendis ab deserunt aut ipsum sed
-              reprehenderit voluptates! Quae? Earum inventore, molestiae optio
-              debitis natus voluptatem distinctio nesciunt, illum id commodi
-              ipsam voluptatum recusandae nobis nostrum amet deleniti vel
-              asperiores pariatur tenetur aspernatur provident alias eaque
-              reprehenderit. Optio, inventore. Quaerat libero aut commodi
-              explicabo quo exercitationem vitae et placeat odio. Assumenda id
-              aperiam aliquid ex provident sapiente. Accusamus quia laboriosam
-              temporibus at quisquam porro autem consectetur maxime minus
-              labore. Iusto, eius reprehenderit autem similique nesciunt libero
-              cum blanditiis saepe quibusdam quod cupiditate at expedita
+              saepe quibusdam quod cupiditate at expedita
             </p>
           </div>
         </div>
       </section>
       <section class="my-projects-section section-3">
-        <h2>Moje projekty</h2>
+        <h2 class="projects-heading">My projects</h2>
         <div class="projects-container">
           <div class="project">
             <img src="img/responsive-site.png" alt="" />
@@ -116,13 +116,15 @@
             </div>
           </div>
         </div>
-        <p>Wszystkie projekty zostało zrobione samodzielnie</p>
-        <p>Żadne nie pochodzą z kursów lub tutoriali.</p>
+        <div class="projects-info">
+          <p>Lorem ipsum</p>
+          <p>Dolor si amet.</p>
+        </div>       
       </section>
       <section class="contact-section section-4">
         <div class="contact-tile">
-          <h2>Kontakt</h2>
-          <p>Wyślij wiadomość lub znajdź mnie tutaj:</p>
+          <h2>Contact</h2>
+          <p>Send me a message or find me here:</p>
           <div class="social-media">
             <a href=""><i class="fa-brands fa-facebook"></i></a>
             <a href=""><i class="fa-brands fa-github"></i></a>
@@ -134,10 +136,10 @@
             method="POST"
           >
             <label>
-              <p>Twój email:</p>
+              <p>Your email:</p>
               <input type="email" id="email" name="email" autocomplete="off" />
             </label>
-            <p>Wiadomość:</p>
+            <p>Message:</p>
             <textarea name="message" id="message"></textarea>
             <div class="send-btn">
               <input type="submit" value="Send" />
