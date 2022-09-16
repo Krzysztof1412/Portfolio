@@ -38,6 +38,19 @@ const appendElements = function () {
 };
 appendElements();
 
+const burgerBtn = document.querySelector('.burger-btn');
+burgerBtn.addEventListener('click', function() {
+  const sideMenu = document.querySelector('.side-menu');
+  const burgerTop = document.querySelector('.burger-top');
+  const burgerMid = document.querySelector('.burger-mid');
+  const burgerBottom = document.querySelector('.burger-bottom');
+  sideMenu.classList.toggle('no-translate');
+  burgerTop.classList.toggle('burger-top-close');
+  burgerMid.classList.toggle('burger-mid-close');
+  burgerBottom.classList.toggle('burger-bottom-close');
+  burgerBtn.classList.toggle('burger-btn-close');
+});
+
 // const addObervers = function () {
 //   const moveToSection = function (entries) {
 //     const [entry] = entries;
