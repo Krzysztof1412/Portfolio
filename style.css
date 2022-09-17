@@ -122,11 +122,12 @@ nav .nav-btn {
 
 .about-me-side {
   padding: 0 10px;
-  width: 30%;
+  width: 40%;
 }
 
 .about-me-img {
   height: 100%;
+  padding: 20px;
 }
 
 .about-me-img img {
@@ -314,13 +315,14 @@ footer p {
   height: 40px;
   border: 2px solid #fff;
   border-radius: 10px;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 7px;
   z-index: 100;
   transition: .5s ease-in-out;
+  cursor: pointer;
 }
 
 .burger-btn-close {
@@ -355,6 +357,7 @@ footer p {
 .side-menu-btn {
   color: #fff;
   font-size: 36px;
+  cursor: pointer;
 }
 
 .no-translate {
@@ -445,6 +448,10 @@ footer p {
   .contact-tile {
     width: 100%;
   }
+
+  .burger-btn {
+    display: flex;
+  }
 }
 
 @media (max-height: 500px) {
@@ -453,5 +460,13 @@ footer p {
   .section-3,
   .section-4 {
     height: auto;
+  }
+
+  .start-center h1 {
+    font-size: 4rem;
+  }
+
+  .start-center h2 {
+    font-size: 2rem;
   }
 }
