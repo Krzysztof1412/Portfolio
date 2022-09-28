@@ -33,7 +33,8 @@ const appendElements = function () {
   const img = document.querySelector('.start-tile img');
 
   setTimeout(() => h1.classList.remove('hidden'), 500);
-  setTimeout(() => h2.classList.remove('hidden'), 2500);
+  setTimeout(() => img.classList.remove('hidden'), 3500);
+  setTimeout(() => h2.classList.remove('hidden'), 2000);
 };
 appendElements();
 
@@ -78,7 +79,3 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(document.querySelector('.section-1'));
-
-document.querySelector('#start-face').addEventListener('load', function (e) {
-  e.target.classList.remove('hidden');
-});
