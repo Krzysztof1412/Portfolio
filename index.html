@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="img/icon.png" />
     <script defer src="script.js"></script>
     <link
       rel="stylesheet"
@@ -16,115 +17,143 @@
     />
   </head>
   <body>
-    <header class="section-1">
+    <header class="section-1" id="start-anchor">
       <nav>
-        <div class="nav-btn">Start</div>
-        <div class="nav-btn">About me</div>
-        <div class="nav-btn">My projects</div>
-        <div class="nav-btn">Contact</div>
+        <a href="#start-anchor">
+          <div class="nav-btn">Start</div>
+        </a>
+        <a href="#about-me-anchor">
+          <div class="nav-btn">About me</div>
+        </a>
+        <a href="#my-projects-anchor">
+          <div class="nav-btn">My projects</div>
+        </a>
+        <a href="#contact-anchor">
+          <div class="nav-btn">Contact</div>
+        </a>
       </nav>
       <div class="nav-logo">
-        <img src="img/logo.png" alt="" />
-      </div>     
-        <div class="burger-btn">
-          <div class="burger-top"></div>
-          <div class="burger-mid"></div>
-          <div class="burger-bottom"></div>
-        </div>
-      <div class="side-menu">
-        <div class="side-menu-btn">Start</div>
-        <div class="side-menu-btn">About me</div>
-        <div class="side-menu-btn">My projects</div>
-        <div class="side-menu-btn">Contact</div>
+        <img src="img/logo.png" alt="logo" />
       </div>
-      
+      <div class="burger-btn">
+        <div class="burger-top"></div>
+        <div class="burger-mid"></div>
+        <div class="burger-bottom"></div>
+      </div>
+      <div class="side-menu">
+        <a href="#start-anchor">
+          <div class="side-menu-btn">Start</div>
+        </a>
+        <a href="#about-me-anchor">
+          <div class="side-menu-btn">About me</div>
+        </a>
+        <a href="#my-projects-anchor">
+          <div class="side-menu-btn">My projects</div>
+        </a>
+        <a href="#contact-anchor">
+          <div class="side-menu-btn">Contact</div>
+        </a>
+      </div>
+
       <section class="start">
         <div class="start-tile">
           <div class="start-center">
             <h1 class="start-header hidden">Hi,</h1>
-            <h2 class="start-header hidden">
-              I want to become Front-end Developer
-            </h2>
+            <h2 class="start-header hidden">I want to become Web Developer</h2>
           </div>
         </div>
-        <div class="start-tile">
-          <img
-            src="https://icon-library.com/images/face-icon/face-icon-11.jpg"
-            alt=""
-            class="hidden"
-          />
+        <div class="start-tile" style="max-width: 700px">
+          <img src="img/face.png" alt="my face" class="hidden" />
         </div>
       </section>
     </header>
     <main>
-      <section class="about-me-section section-2">
+      <section class="about-me-section section-2" id="about-me-anchor">
         <div class="about-me">
           <div class="about-me-img">
-            <img
-            src="https://icon-library.com/images/face-icon/face-icon-11.jpg""
-            alt="">
+            <img src="img/about-img.jpg" alt="my face" />
           </div>
           <div class="about-me-side">
             <h2>About me</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              saepe quibusdam quod cupiditate at expedita
+              My name is Krzysztof. Programming is my passion and it makes me
+              happy every time when I can create everything what I can imagine.
+              In the future I would like to develop towards Web development and
+              get to know better and better solutions.
             </p>
           </div>
         </div>
       </section>
-      <section class="my-projects-section section-3">
+      <section class="my-projects-section section-3" id="my-projects-anchor">
         <h2 class="projects-heading">My projects</h2>
         <div class="projects-container">
           <div class="project">
-            <img src="img/responsive-site.png" alt="" />
-            <div class="show-info">
-              <h3>Strona Front-end</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                dolore error facere est dolor perspiciatis rem necessitatibus
-                repellendus in corrupti nobis, provident totam optio, quam
-                corporis, quo dolorum? Eum, veritatis.
-              </p>
-            </div>
+            <a
+              href="https://krzysztof1412.github.io/Front-end-page/"
+              target="_blank"
+            >
+              <img src="img/responsive-site.png" alt="project photo" />
+              <div class="show-info">
+                <h3>Front-end page</h3>
+                <p>
+                  Here I practised RWD to make the page fully responsive on all
+                  devices. Additionally, I created online code editor where you
+                  can write in HTML, CSS and JavaScript.
+                </p>
+              </div>
+            </a>
           </div>
+
           <div class="project">
-            <img src="img/to-do-list.png" alt="" />
-            <div class="show-info">
-              <h3>To do list</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                dolore error facere est dolor perspiciatis rem necessitatibus
-                repellendus in corrupti nobis, provident totam optio, quam
-                corporis, quo dolorum? Eum, veritatis.
-              </p>
-            </div>
+            <a
+              href="https://krzysztof1412.github.io/To-do-list/"
+              target="_blank"
+            >
+              <img src="img/to-do-list.png" alt="project photo" />
+              <div class="show-info">
+                <h3>To do list</h3>
+                <p>
+                  Here I implemented drag and drop functionality which makes it
+                  easier to use. Works also on mobile.
+                </p>
+              </div>
+            </a>
           </div>
+
           <div class="project">
-            <img src="img/bank-app.png" alt="" />
-            <div class="show-info">
-              <h3>Aplikacja bankowa</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-                dolore error facere est dolor perspiciatis rem necessitatibus
-                repellendus in corrupti nobis, provident totam optio, quam
-                corporis, quo dolorum? Eum, veritatis.
-              </p>
-            </div>
+            <a
+              href="https://krzysztof1412.github.io/Bank-application/"
+              target="_blank"
+            >
+              <img src="img/bank-app.png" alt="project photo" />
+              <div class="show-info">
+                <h3>Bank application</h3>
+                <p>
+                  This is the project where I was training my JS skills like
+                  arrays, internationalization API, DOM events and more.
+                </p>
+              </div>
+            </a>
           </div>
         </div>
         <div class="projects-info">
-          <p>Lorem ipsum</p>
-          <p>Dolor si amet.</p>
-        </div>       
+          <p>
+            In all of these projects I had one goal. To make my HTML, CSS and JS
+            skills better.
+          </p>
+        </div>
       </section>
-      <section class="contact-section section-4">
+      <section class="contact-section section-4" id="contact-anchor">
         <div class="contact-tile">
           <h2>Contact</h2>
           <p>Send me a message or find me here:</p>
           <div class="social-media">
-            <a href=""><i class="fa-brands fa-facebook"></i></a>
-            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:krzysztof.koltowski14@gmail.com"
+              ><i class="fa-regular fa-envelope"></i
+            ></a>
+            <a href="https://github.com/Krzysztof1412" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
           </div>
         </div>
         <div class="contact-tile">
@@ -155,7 +184,7 @@
     </main>
     <footer>
       <div class="footer-img">
-        <img src="img/logo.png" alt="" />
+        <img src="img/logo.png" alt="logo" />
       </div>
       <p>&copy; 2022 Krzysztof Kołtowski</p>
       <p>All rights reserved.</p>

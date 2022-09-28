@@ -12,15 +12,15 @@ form.addEventListener('submit', function (e) {
 
   if (!email.value && !message.value) {
     info.textContent =
-      'Uzupełnij poprawnie adres e-mail oraz nie zapomnij napisać wiadomości.';
+      'Check your email address and do not forget to send me a message.';
     return;
   }
   if (!email.value || !re.test(email.value)) {
-    info.textContent = 'Uzupełnij poprawnie adres e-mail.';
+    info.textContent = 'Check you email address.';
     return;
   }
   if (!message.value) {
-    info.textContent = 'Napisz wiadomość aby kontynuować.';
+    info.textContent = 'Write a message to send.';
     return;
   }
 
@@ -38,8 +38,7 @@ const appendElements = function () {
 };
 appendElements();
 
-const burgerBtn = document.querySelector('.burger-btn');
-burgerBtn.addEventListener('click', function() {
+const toggleSideMenu = function () {
   const sideMenu = document.querySelector('.side-menu');
   const burgerTop = document.querySelector('.burger-top');
   const burgerMid = document.querySelector('.burger-mid');
@@ -49,7 +48,37 @@ burgerBtn.addEventListener('click', function() {
   burgerMid.classList.toggle('burger-mid-close');
   burgerBottom.classList.toggle('burger-bottom-close');
   burgerBtn.classList.toggle('burger-btn-close');
+};
+
+const burgerBtn = document.querySelector('.burger-btn');
+burgerBtn.addEventListener('click', function () {
+  toggleSideMenu();
 });
+
+const sideMenu = document.querySelector('.side-menu');
+sideMenu.addEventListener('click', function (e) {
+  if (e.target.classList.contains('side-menu')) return;
+  toggleSideMenu();
+});
+
+const nav = document.querySelector('nav');
+const observer = new IntersectionObserver(
+  ([entry]) => {
+    if (!entry.isIntersecting) {
+      nav.classList.add('position-fixed');
+      nav.style.backgroundColor = '#000';
+    } else {
+      nav.classList.remove('position-fixed');
+      nav.style.backgroundColor = 'transparent';
+    }
+  },
+  {
+    threshold: 0.2,
+    rootMargin: `${nav.getBoundingClientRect().height}px`,
+  }
+);
+
+observer.observe(document.querySelector('.section-1'));
 
 // const addObervers = function () {
 //   const moveToSection = function (entries) {
