@@ -308,6 +308,7 @@ nav .nav-btn {
   font-size: 18px;
   position: relative;
   padding: 10px 0;
+  text-align: left;
 }
 
 a {
