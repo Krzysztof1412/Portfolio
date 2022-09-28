@@ -79,25 +79,3 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(document.querySelector('.section-1'));
-
-// const addObervers = function () {
-//   const moveToSection = function (entries) {
-//     const [entry] = entries;
-//     const coords = entry.target.getBoundingClientRect().top;
-
-//     if (entry.isIntersecting) {
-//       const windowHeight = window.innerHeight;
-//       entry.target.scrollIntoView({ behavior: 'smooth' });
-//       // window.scrollBy(0, windowHeight - window.scrollY);
-//       console.log(entry);
-//     }
-//   };
-
-//   const aboutMe = document.querySelector('.about-me-section');
-
-//   const sectionObserver = new IntersectionObserver(moveToSection, {
-//     rootMargin: '-100px',
-//   });
-//   sectionObserver.observe(aboutMe);
-// };
-// addObervers();
