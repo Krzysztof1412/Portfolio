@@ -33,8 +33,8 @@ const appendElements = function () {
   const img = document.querySelector('.start-tile img');
 
   setTimeout(() => h1.classList.remove('hidden'), 500);
-  setTimeout(() => img.classList.remove('hidden'), 5500);
-  setTimeout(() => h2.classList.remove('hidden'), 2500);
+  setTimeout(() => img.classList.remove('hidden'), 3500);
+  setTimeout(() => h2.classList.remove('hidden'), 1500);
 };
 appendElements();
 
