@@ -639,10 +639,15 @@ footer p {
 
   .about-me {
     padding: 10px;
+    max-height: none;
   }
 
   .about-me h2 {
     font-size: 3em;
+  }
+
+  .ul-tab li {
+    padding: 10 20px;
   }
 }
 
