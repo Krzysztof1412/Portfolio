@@ -79,3 +79,50 @@ const observer = new IntersectionObserver(
 );
 
 observer.observe(document.querySelector('.section-1'));
+
+const aboutMeTabsContainer = document.querySelector('.about-me-tabs');
+const tabDescription = document.querySelector('.tab-desc');
+const skillsTab = document.querySelector('#skills-tab');
+const experienceTab = document.querySelector('#experience-tab');
+let html;
+aboutMeTabsContainer.addEventListener('click', function (e) {
+  switch (e.target.id) {
+    case 'skills-tab':
+      {
+        html = `
+        <ul class="ul-tab">
+          <li class="html-skill">HTML</li>
+          <li class="css-skill">CSS</li>
+          <li class="js-skill">JavaScript</li>
+          <li class="wp-skill">Wordpress</li>
+        </ul>`;
+        skillsTab.classList.add('tab-underline');
+        experienceTab.classList.remove('tab-underline');
+      }
+      break;
+    case 'experience-tab':
+      {
+        html = `
+          <div class="experience-item">
+            <p class="experience-name">Website administrator</p>
+            <p class="experience-date">March 2023 - now</p>
+          </div>`;
+        skillsTab.classList.remove('tab-underline');
+        experienceTab.classList.add('tab-underline');
+      }
+      break;
+  }
+  tabDescription.innerHTML = html;
+});
+
+const projectsObserver = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting)
+      document.querySelector('.my-projects-underline').style.width = '50%';
+  },
+  {
+    threshold: 0.3,
+  }
+);
+
+projectsObserver.observe(document.querySelector('.section-3'));
