@@ -111,6 +111,8 @@ aboutMeTabsContainer.addEventListener('click', function (e) {
         experienceTab.classList.add('tab-underline');
       }
       break;
+    default:
+      html = tabDescription.innerHTML;
   }
   tabDescription.innerHTML = html;
 });
