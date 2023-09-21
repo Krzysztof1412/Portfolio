@@ -91,10 +91,13 @@ aboutMeTabsContainer.addEventListener('click', function (e) {
       {
         html = `
         <ul class="ul-tab">
-          <li class="html-skill">HTML</li>
-          <li class="css-skill">CSS</li>
-          <li class="js-skill">JavaScript</li>
-          <li class="wp-skill">Wordpress</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+        <li>Wordpress</li>
+        <li>SEO</li>
         </ul>`;
         skillsTab.classList.add('tab-underline');
         experienceTab.classList.remove('tab-underline');
